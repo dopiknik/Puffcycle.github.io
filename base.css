@@ -1,0 +1,128 @@
+/* =========================
+   BASE / RESET / GLOBAL
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #141414;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   GLOBAL ELEMENTS / DEFAULTS
+   ========================= */
+#section0 {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Scroll hint base (aniWrap) */
+.aniWrap {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  pointer-events: none;
+  width: 21px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: showAfterPreloader 1s ease-out 15s forwards;
+}
+
+.mouse {
+  width: 21px;
+  height: 37.5px;
+  border: 1.5px solid white;
+  border-radius: 10.5px;
+}
+
+.scroller {
+  width: 3px;
+  height: 3px;
+  border-radius: 1.5px;
+  background: white;
+  position: relative;
+  top: 7.5px;
+  left: 7.5px;
+  -webkit-animation: scrolls 2s ease-out infinite;
+  animation: scrolls 2s ease-out infinite;
+}
+
+/* =========================
+   KEYFRAMES
+   (Собраны все вместе для удобства)
+   ========================= */
+@keyframes shimmer {
+  0% { transform: rotate(-45deg) translate(-200%, -200%); }
+  50% { transform: rotate(-45deg) translate(200%, 200%); }
+  100% { transform: rotate(-45deg) translate(-200%, -200%); }
+}
+
+@keyframes cleanvapeFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes scrolls {
+  0% { top: 13.5px; opacity: 1; height: 3px; }
+  95% { top: 3.75px; opacity: 0; height: 6px; }
+  100% { top: 13.5px; opacity: 1; height: 3px; }
+}
+
+@keyframes showAfterPreloader {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes faqSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cleanvapeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   MENU INVERSION (shared)
+   ========================= */
+body.invert-menu .menu {
+  background-color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+body.invert-menu .menu .nav-item {
+  color: #000;
+}
+
+body.invert-menu .menu .nav-item.aactive {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.invert-menu .menu .nav-item:not(.aactive):hover {
+  background-color: rgba(0,0,0,0.08);
+  color: #000;
+}
+
+/* Smooth transitions for menu */
+.menu, .menu .nav-item {
+  transition: background-color .75s ease, color .75s ease;
+}
