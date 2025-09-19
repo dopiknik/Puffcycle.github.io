@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .instant-loader {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: #141414;
+        z-index: 100000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      .instant-loader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .instant-spinner {
+        width: 60px;
+        height: 60px;
+        border: 6px solid rgba(255,255,255,0.1);
+        border-top-color: #667eea;
+        border-radius: 50%;
+        animation: instantSpin 0.8s linear infinite;
+      }
+      @keyframes instantSpin { to { transform: rotate(360deg); } }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <title>Puffcycle - Vape Recycling Solutions | Eco-Friendly Vape Waste Management</title>
+    
+    <meta name="description" content="Puffcycle provides innovative vape recycling solutions. Order collection bins, donate to save the environment from vape waste. Professional e-cigarette disposal and recycling services.">
+
+    <meta name="keywords" content="vape recycling, puffcycle, vape disposal, e-cigarette recycling, vape waste management, eco-friendly vaping, disposable vape collection, environmental protection">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Puffcycle">
+    <meta name="language" content="en">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Puffcycle - Revolutionary Vape Recycling Solutions">
+    <meta property="og:description" content="Join the movement to save the planet from vape waste. Order collection bins and make eco-friendly donations with Puffcycle.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:image" content="https://yoursite.com/og-image.jpg">
+    <meta property="og:site_name" content="Puffcycle">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puffcycle - Vape Recycling Solutions">
+    <meta name="twitter:description" content="Eco-friendly vape waste management and recycling services">
+    <meta name="twitter:image" content="https://yoursite.com/twitter-image.jpg">
+
+    <!-- Local Business -->
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+
+    <!-- Mobile Optimize -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Puffcycle">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="canonical" href="https://yoursite.com/">
+  </head>
+  <body>
+
+    <div class="instant-loader" id="instantLoader">
+      <div class="instant-spinner"></div>
+      <div style="color:#fff;font-family:sans-serif;margin-top:18px;font-size:1.1em;opacity:0.8;">Loading images...</div>
+    </div>
+
+
+    <div class="preloader">
+      <div class="col c-1">
+        <div class="item">
+          <img src="./assets/preloader/img/2.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/3.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/4.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/5.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col c-2">
+        <div class="item">
+          <img src="./assets/preloader/img/6.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/7.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/8.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/9.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/10.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col c-3">
+        <div class="item">
+          <img src="./assets/preloader/img/11.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/12.jpg" alt="" />
+        </div>
+        <div class="item">
+          <video class="my-video" autoplay muted loop>
+            <source src="output_last.mp4" type="video/mp4" />
+            <source src="output_last_version2.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/5.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/8.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col c-4">
+        <div class="item">
+          <img src="./assets/preloader/img/2.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/3.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/4.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/12.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col c-5">
+        <div class="item">
+          <img src="./assets/preloader/img/6.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/7.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/11.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/9.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assets/preloader/img/10.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <header class="main-header">
+      <!-- Mobile burger button (hidden on desktop) -->
+      <button
+        class="mobile-burger"
+        id="mobileBurger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="logo">
+        <a href="#firstPage"><img src="logo.avif" alt="Puffcycle - Vape Recycling Solutions" /></a>
+      </div>
+      <nav class="menu">
+        <a href="#firstPage" class="nav-item aactive">Home</a>
+        <a href="#secondPage" class="nav-item">Location</a>
+        <a href="#3rdPage" class="nav-item">Donate</a>
+        <a href="#4thpage" class="nav-item">About Us</a>
+      </nav>
+      <div class="box-1">
+        <button class="nav-btn" id="openSidebar">Order Bin</button>
+      </div>
+    </header>
+
+    <!-- Mobile navigation overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <nav class="mobile-nav-panel">
+        <div class="mobile-nav-header">
+          <span class="mobile-nav-title">Menu</span>
+          <button
+            class="mobile-nav-close"
+            id="mobileNavClose"
+            aria-label="Close menu"
+          >
+            &times;
+          </button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#firstPage" class="mobile-nav-link">Home</a></li>
+          <li><a href="#secondPage" class="mobile-nav-link">Location</a></li>
+          <li><a href="#3rdPage" class="mobile-nav-link">Donate</a></li>
+          <li><a href="#4thpage" class="mobile-nav-link">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="fullpage">
+      <div id="section0" class="section active">
+        <div class="hero-title">
+          <h1>VAPE SMART. PLAY YOUR PART.</h1>
+        </div>
+        <div class="counter-container">
+          <div id="counter">0</div>
+          <p>Trash</p>
+        </div>
+      </div>
+
+      <div id="section1" class="section">
+        <div class="map-wrapper" id="mapWrapper">
+          <iframe
+            id="mapFrame"
+            src="https://my.atlist.com/map/ccd9c6bd-6027-498d-b000-b209f5d30a9c?share=true"
+            allow="geolocation 'self' https://my.atlist.com"
+            loading="lazy"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div id="section2" class="section">
+        <div class="donation-floating-shape"></div>
+        <div class="donation-full">
+          <div class="donation-widget" id="donationWidget">
+            <div class="donation-form-box">
+              <div class="donation-header">
+                <h1 class="donation-title">Make a Difference</h1>
+              </div>
+              <form class="donation-form" id="donationForm">
+                <div class="donation-group">
+                  <label for="donationAmountInput" class="donation-label"
+                    >Donation Amount</label
+                  >
+                  <div class="donation-amount-options">
+                    <button
+                      type="button"
+                      class="donation-amount-btn"
+                      data-amount="10"
+                    >
+                      $10
+                    </button>
+                    <button
+                      type="button"
+                      class="donation-amount-btn"
+                      data-amount="25"
+                    >
+                      $25
+                    </button>
+                    <button
+                      type="button"
+                      class="donation-amount-btn"
+                      data-amount="50"
+                    >
+                      $50
+                    </button>
+                    <button
+                      type="button"
+                      class="donation-amount-btn"
+                      data-amount="100"
+                    >
+                      $100
+                    </button>
+                  </div>
+                  <div class="donation-custom-amount">
+                    <span class="donation-currency-symbol">$</span>
+                    <input
+                      type="number"
+                      id="donationAmountInput"
+                      class="donation-input-number"
+                      placeholder="Custom amount"
+                      min="1"
+                      step="1"
+                      inputmode="numeric"
+                    />
+                  </div>
+                </div>
+                <div class="donation-group">
+                  <span class="donation-label">Donation Frequency</span>
+                  <div class="donation-toggle" id="donationFrequencyToggle">
+                    <input
+                      type="radio"
+                      id="donateOneTime"
+                      name="donationFrequency"
+                      value="oneTime"
+                      checked
+                    />
+                    <label for="donateOneTime" class="donation-toggle-btn"
+                      >One-time</label
+                    >
+                    <input
+                      type="radio"
+                      id="donateMonthly"
+                      name="donationFrequency"
+                      value="monthly"
+                    />
+                    <label for="donateMonthly" class="donation-toggle-btn"
+                      >Monthly</label
+                    >
+                  </div>
+                </div>
+                <div class="donation-group">
+                  <button type="submit" class="donation-submit-btn">
+                    Donate Now
+                  </button>
+                  <div
+                    class="donation-error"
+                    id="donationError"
+                    aria-live="polite"
+                  ></div>
+                </div>
+              </form>
+              <div class="donation-secure">
+                <span class="donation-lock-icon" aria-hidden="true"></span>
+                <p>All transactions are secure and encrypted</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="donation-info-content">
+            <h2 class="donation-info-title">
+              Puffcycle: Saving the Planet from Vape Waste
+            </h2>
+            <p class="donation-info-subtitle">
+              Every contribution makes vape recycling more effective
+            </p>
+            <div class="donation-text-blocks">
+              <div class="donation-text-block">
+                <h3 class="donation-block-title">
+                  Vape Waste: Hidden Environmental Threat
+                </h3>
+                <p class="donation-block-text">
+                  Millions of disposable vapes end up in landfills every day,
+                  poisoning soil with lithium-ion batteries and toxic chemicals.
+                  A single discarded vape can pollute groundwater over an area
+                  the size of a football field for up to 50 years.
+                </p>
+              </div>
+
+              <div class="donation-text-block">
+                <h3 class="donation-block-title">
+                  Your Puffcycle Donation Creates Real Impact
+                </h3>
+                <p class="donation-block-text">
+                  Every $10 allows us to safely process 15 vape devices, recover
+                  valuable metals for reuse, and keep toxins out of nature. Your
+                  support directly protects the ecosystem for future
+                  generations.
+                </p>
+              </div>
+
+              <div class="donation-text-block">
+                <h3 class="donation-block-title">
+                  Technology of the future today
+                </h3>
+                <p class="donation-block-text">
+                  We use advanced recycling methods: specialized robots
+                  disassemble devices and recover 98% of materials for reuse.
+                  Old vapes become new batteries for EVs and solar systems.
+                </p>
+              </div>
+
+              <div class="donation-text-block">
+                <h3 class="donation-block-title">Join the movement</h3>
+                <p class="donation-block-text">
+                  You become part of a global eco-activist community. Your name
+                  is added to an honor roll of planet defenders, and every month
+                  you receive a report detailing the impact of your contribution
+                  with photos and stories of protected areas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="section3" class="section">
+        <div class="slide puffcycle-hero-section">
+          <div class="puffcycle-floating-shapes">
+            <div class="puffcycle-shape"></div>
+            <div class="puffcycle-shape"></div>
+            <div class="puffcycle-shape"></div>
+          </div>
+          <div class="puffcycle-hero-container">
+            <h1 class="puffcycle-hero-logo">Puffcycle</h1>
+            <p class="puffcycle-hero-tagline">
+              Our mission is simple: make vape recycling the norm, not the exception.
+            </p>
+            <div class="puffcycle-hero-description">
+              <p class="puffcycle-hero-decription-text">At Puff Cycle, we’re a team of people who believe that small changes can spark big impact—especially when it comes to protecting the environment. 
+              We’ve watched other countries take meaningful steps to address the growing issue of vape waste, and we knew it was time for the U.S. to step up.</p>
+          
+              <!-- <p class="puffcycle-hero-decription-text">So we decided to lead the charge.</p>
+            
+              <p class="puffcycle-hero-decription-text">Every Puff Cycle bin represents a smarter choice—one that keeps toxic batteries, plastics, and nicotine residue out of landfills, waterways, and communities. 
+              We believe that if more people have access to proper vape disposal, and understand its importance, the environmental hazards associated with vape waste 
+              can be dramatically reduced—or eliminated altogether.</p>
+
+              <p class="puffcycle-hero-decription-text">This isn’t just a business for us. It’s a movement. And we’re proud to be part of the solution.</p>
+             -->
+            </div>
+            <div class="puffcycle-hero-features">
+              <div class="puffcycle-feature-box">
+                <div class="puffcycle-feature-icon">
+                  <i class="fas fa-recycle"></i>
+                </div>
+                <div class="puffcycle-feature-title">Full recycling</div>
+                <div class="puffcycle-feature-desc">
+                  We process all components responsibly
+                </div>
+              </div>
+              <div class="puffcycle-feature-box">
+                <div class="puffcycle-feature-icon">
+                  <i class="fas fa-store-alt"></i>
+                </div>
+                <div class="puffcycle-feature-title">For business</div>
+                <div class="puffcycle-feature-desc">
+                  Free collection bins for retail points
+                </div>
+              </div>
+              <div class="puffcycle-feature-box">
+                <div class="puffcycle-feature-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="puffcycle-feature-title">Reporting</div>
+                <div class="puffcycle-feature-desc">
+                  Detailed statistics and certificates
+                </div>
+              </div>
+              <div class="puffcycle-feature-box">
+                <div class="puffcycle-feature-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div class="puffcycle-feature-title">24/7 Support</div>
+                <div class="puffcycle-feature-desc">
+                  Always available for partners
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide puffcycle-light-stats-section">
+          <div class="puffcycle-light-stats-container">
+            <div class="puffcycle-stats-header">
+              <h2 class="puffcycle-stats-title">Impressive results</h2>
+              <p class="puffcycle-stats-tagline">
+                In 18 months we have built the largest smart vape recycling
+                network
+              </p>
+            </div>
+            <div class="puffcycle-primary-stats">
+              <div class="puffcycle-primary-stat-card">
+                <div class="puffcycle-primary-number" data-target="52000">
+                  0
+                </div>
+                <div class="puffcycle-primary-label">Devices recycled</div>
+                <div class="puffcycle-primary-description">
+                  Vapes processed in full compliance with environmental
+                  standards
+                </div>
+              </div>
+              <div class="puffcycle-primary-stat-card">
+                <div class="puffcycle-primary-number" data-target="280">0</div>
+                <div class="puffcycle-primary-label">Active partners</div>
+                <div class="puffcycle-primary-description">
+                  Stores and retail chains have entrusted us with their
+                  environmental responsibility
+                </div>
+              </div>
+            </div>
+            <div class="puffcycle-secondary-stats-grid">
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="18"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">Cities served</div>
+              </div>
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="4.2"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">Tons processed</div>
+              </div>
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="12000"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">Active users</div>
+              </div>
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="580"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">
+                  kg collected per month
+                </div>
+              </div>
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="98.5"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">
+                  % Satisfied customers
+                </div>
+              </div>
+              <div class="puffcycle-secondary-stat-card">
+                <span class="puffcycle-secondary-number" data-target="3"
+                  >0</span
+                >
+                <div class="puffcycle-secondary-label">
+                  Days for quick installation
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="close-btn" id="closeBtn">&times;</div>
+      <div class="sidebar-content">
+        <div class="sidebar-slider">
+          <div class="sidebar-slides">
+            <div class="sidebar-slide active" data-slide="0">
+              <form class="my-form" autocomplete="on">
+                <div class="container_form">
+                  <h1>Order The Bin</h1>
+                  <ul>
+                    <li>
+                      <select required>
+                        <option selected disabled>
+                          State
+                        </option>
+                        <option>Pennsylvania</option>
+                        <option>New York</option>
+                        <option>Other</option>
+                      </select>
+                    </li>
+                    <li>
+                      <div class="grid grid-2">
+                        <div class="input-wrapper">
+                          <input
+                            type="text"
+                            id="name"
+                            placeholder="Name"
+                            required
+                          />
+                        </div>
+                        <input type="text" placeholder="Company" />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="grid grid-2">
+                        <div class="input-wrapper">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                        <div class="input-wrapper">
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="grid">
+                        <div class="input-wrapper">
+                          <input
+                            type="text"
+                            name="address"
+                            placeholder="Address"
+                            required
+                          />
+                        </div>
+                    </li>
+                    <li>
+                      <textarea placeholder="Message"></textarea>
+                    </li>
+                    <li>
+                      <div class="grid grid-3">
+                        <button class="btn-grid" type="submit">
+                          <span class="back">
+                            <img
+                              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg"
+                              alt=""
+                            />
+                          </span>
+                          <span class="front">SUBMIT</span>
+                        </button>
+                        <button class="btn-grid" type="reset">
+                          <span class="back">
+                            <img
+                              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg"
+                              alt=""
+                            />
+                          </span>
+                          <span class="front">RESET</span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <div class="sidebar-slide" data-slide="1">
+              <div class="faq-info">
+                <h1>FAQ</h1>
+                <div class="faq-list">
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="0">
+                      <span>How does PuffCycle work?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        Once you request a bin, our team will drop it off at your location. When it’s full, we’ll swing by to pick it up and handle all the recycling — no shipping, no hassle.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="1">
+                      <span>How quickly can I get a bin delivered?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        Standard delivery is within 24-48 hours. Same-day
+                        delivery is available for urgent requests with an
+                        additional fee.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="2">
+                      <span>Do I have to pay for the bin or pickup?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        Nope. The bin, delivery, pickup, and recycling are all free. There’s no cost to you.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="3">
+                      <span>What can be put in the bin?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        You can toss in any disposable vape devices, cartridges, and pods — even if they still contain e-liquid or batteries. We handle the safe, responsible recycling of all components.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="4">
+                      <span>Where do you offer this service?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        We currently serve XXXX. If you’re unsure whether you’re in range, just fill out the form — we’ll follow up quickly.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-question" data-question="5">
+                      <span>How can I contact support?</span>
+                      <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>
+                        Call us at (555) 123-4567, email support@puffcycle.com,
+                        or use the contact form. Our team is available 7 days a
+                        week.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <button class="sidebar-nav-btn active" data-slide="0">
+            Order Bin
+          </button>
+          <button class="sidebar-nav-btn" data-slide="1">FAQ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="aniWrap">
+      <div class="mouse">
+        <div class="scroller"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
